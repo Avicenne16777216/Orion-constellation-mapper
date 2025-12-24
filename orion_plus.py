@@ -2,6 +2,8 @@ import requests
 import re
 import math
 import matplotlib.pyplot as plt
+import os
+from dotenv import load_dotenv
 
 # --- 1. Fonction de conversion des coordonnées stellaires ---
 def convertir_coords_stellaires_en_xy(ra_str, dec_str):
@@ -49,12 +51,20 @@ def convertir_coords_stellaires_en_xy(ra_str, dec_str):
     return x_coord, y_coord
 
 # --- 2. Appel à l'API pour récupérer les données des étoiles ---
+
 url_de_base = "https://api.api-ninjas.com/v1/stars"
 parametres = {
     "constellation" : "orion"
 }
+
+# Load the variables from the .env file
+load_dotenv()
+
+# Retrieve the key from the environment
+api_key = os.getenv("API_NINJAS_KEY")
+
 headers = {
-    'X-Api-Key': "ZB6SN0rbSV9U35XYn9QWRA==T3GlIVshXQqMGrHD" # Utilise ta propre clé API ici
+    'X-Api-Key': api_key # Now the key is hidden!
 }
 
 # Listes pour stocker les coordonnées et les noms des étoiles à tracer

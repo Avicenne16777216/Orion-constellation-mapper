@@ -1,6 +1,6 @@
 Orion Constellation Visualizer
 
-This project retrieves star data for the constellation "Orion" using the KEY = "ZB6SN0rbSV9U35XYn9QWRA==T3GlIVshXQqMGrHD"(https://api-ninjas.com/api/stars), converts celestial coordinates (Right Ascension and Declination) into decimal degrees, and visualizes the constellation with Matplotlib.
+This project retrieves star data for the constellation "Orion" using the KEY API NINJAS (https://api-ninjas.com/api/stars), converts celestial coordinates (Right Ascension and Declination) into decimal degrees, and visualizes the constellation with Matplotlib.
 
 ✨ Features
 - Fetches star data from an external API.
