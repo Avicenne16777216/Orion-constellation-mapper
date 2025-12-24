@@ -1,0 +1,26 @@
+📄 Short Scientific Paper
+
+```markdown
+
+Visualizing Orion: A Computational Approach to Stellar Coordinates
+
+Abstract
+This project demonstrates a computational method for retrieving and visualizing stellar data. Using the Orion constellation as a case study, Right Ascension (RA) and Declination (Dec) coordinates are converted into decimal degrees and plotted with Matplotlib. The work bridges astronomical data formats with computational visualization.
+
+Introduction
+Astronomical coordinates are traditionally expressed in sexagesimal formats (hours, minutes, seconds for RA; degrees, arcminutes, arcseconds for Dec). For computational tasks, these must be converted into decimal degrees. This project leverages Python to automate the conversion and visualization of Orion’s stars.
+
+Methods
+1. Data Retrieval: Stellar data is fetched from the API Ninjas Stars API, filtered by constellation (Orion).
+2. Coordinate Conversion: Regex parsing extracts RA and Dec values. RA is converted by multiplying hours by 15, while Dec accounts for sign and sexagesimal breakdown.
+3. Visualization: Matplotlib plots stars on a black background. Main stars are annotated for clarity. The RA axis is inverted to match astronomical convention.
+
+Results
+The visualization reproduces Orion’s familiar shape, with Betelgeuse, Rigel, and the Belt stars clearly annotated. The conversion algorithm successfully handles Unicode symbols and non-breaking spaces in API data.
+
+Discussion
+This project highlights the importance of coordinate conversion in astronomy. By bridging traditional formats with computational tools, astronomers and engineers can automate visualization tasks. The approach is extensible to other constellations and datasets.
+
+Conclusion
+The Orion Visualizer demonstrates how Python can integrate API data, regex parsing, and scientific plotting to produce accurate astronomical visualizations. This methodology supports educational, research, and outreach applications in astronomy.
+
